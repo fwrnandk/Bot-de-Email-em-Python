@@ -17,9 +17,9 @@ def conectar_sql_server():
     return conn
 
 def criar_arquivo_excel(mensagem):
-    emails_data = [{'Mensagem': mensagem}]  # Somente a mensagem
+    emails_data = [{'Mensagem': mensagem}]  
     df = pd.DataFrame(emails_data)
-    arquivo_excel = 'mensagem.xlsx'  # Nome do arquivo
+    arquivo_excel = 'mensagem.xlsx'
     df.to_excel(arquivo_excel, index=False)
     return arquivo_excel
 
